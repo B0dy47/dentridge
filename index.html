@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DentRidge — Hero (Image + White CTA)</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles3.css" />
+</head>
+<body>
+
+  <!-- Logo Header -->
+  <header class="site-header">
+    <!-- غيّر src لمسار اللوجو عندك -->
+    <img src="logo.png" alt="DentRidge" class="brand">
+  </header>
+
+  <main class="wrapper">
+    <!-- Card يحتوي الصورة كاملة + زر أبيض فقط -->
+    <figure class="image-card">
+      <!-- غيّر src لمسار الصورة عندك -->
+      <img src="hero.png" alt="Doctor holding a small globe" class="hero-img"/>
+
+      <!-- الزر الأبيض -->
+      <button class="cta" id="applyBtn" aria-label="Start Your Application Now">
+        <span>Start Your Application<br class="br-mobile"/> NOW</span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </figure>
+
+    <!-- ===== Services Section ===== -->
+<section class="services" id="services">
+  <div class="services__container">
+    <h2 class="services__title">
+      Our professional <span class="highlight">Services.</span>
+    </h2>
+
+    <div class="services__grid">
+      <!-- Card 1 (داكن + زر أحمر) -->
+      <article class="service-card service-card--dark">
+        <div class="service-card__media">
+          <img src="Service 1.jpg" alt="Visa & Travel Arrangements">
+        </div>
+
+        <h3 class="service-card__heading">Visa &amp; Travel Arrangements</h3>
+        <p class="service-card__text">
+          We handle your visa application and flight bookings, making your travel
+          process smooth and stress-free.
+        </p>
+
+        <div class="service-card__bubble">
+          <button class="service-card__cta service-card__cta--brand" aria-label="Learn more about visa & travel">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="service-card__arrow">
+              <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 2 (فاتح + زر داكن) -->
+      <article class="service-card service-card--light">
+        <div class="service-card__media">
+          <img src="Service 2.png" alt="Accommodation & Support">
+        </div>
+
+        <h3 class="service-card__heading">Accommodation &amp; Support</h3>
+        <p class="service-card__text">
+          We secure comfortable housing for you and provide full support in the
+          destination country to ensure a safe and easy stay.
+        </p>
+
+        <div class="service-card__bubble">
+          <button class="service-card__cta" aria-label="Learn more about accommodation & support">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="service-card__arrow">
+              <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 3 (فاتح + زر داكن) -->
+      <article class="service-card service-card--light">
+        <div class="service-card__media">
+          <img src="Service 3.png" alt="Program Coordination">
+        </div>
+
+        <h3 class="service-card__heading">Program Coordination</h3>
+        <p class="service-card__text">
+          We arrange your clinical training placement, coordinate with the hospital,
+          and make sure everything is ready before you arrive.
+        </p>
+
+        <div class="service-card__bubble">
+          <button class="service-card__cta" aria-label="Learn more about program coordination">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="service-card__arrow">
+              <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </article>
+    </div>
+  
+    <!-- Nav controls + dots to match design -->
+    <div class="services__nav">
+      <button class="nav-btn nav-btn--prev" aria-label="Previous">
+        <span>&larr;</span>
+      </button>
+      <div class="nav-dots" aria-hidden="true">
+        <span class="dot is-active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot is-faded"></span>
+      </div>
+      <button class="nav-btn nav-btn--next" aria-label="Next">
+        <span>&rarr;</span>
+      </button>
+    </div>
+    <p class="services__footnote">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </p>
+    </div>
+</section>
+<!-- ===== Success Story Section ===== -->
+<section class="success" id="success">
+  <div class="success__container">
+    <div class="success__media">
+      <img src="Our specialist.png" alt="Successful doctor portrait">
+      <!-- Social icons vertical -->
+      <nav class="success__socials" aria-label="Social links">
+        <a href="#" aria-label="Facebook" class="ico">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter" class="ico">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.8c-.7.3-1.5.6-2.3.7a4 4 0 001.8-2.2 8 8 0 01-2.5 1 4 4 0 00-6.9 3.6 11.6 11.6 0 01-8.4-4.2 4 4 0 001.2 5.3c-.6 0-1.2-.2-1.7-.5v.1a4 4 0 003.2 3.9c-.5.1-1 .2-1.5.1a4 4 0 003.7 2.8A8.1 8.1 0 012 19.6a11.5 11.5 0 006.3 1.9c7.6 0 11.9-6.3 11.9-11.9v-.5c.8-.6 1.5-1.3 2.1-2.1z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube" class="ico">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 7.1a3 3 0 00-2.1-2.1C19.3 4.5 12 4.5 12 4.5s-7.3 0-9.4.5A3 3 0 00.5 7.1C0 9.2 0 12 0 12s0 2.8.5 4.9a3 3 0 002.1 2.1c2.1.5 9.4.5 9.4.5s7.3 0 9.4-.5a3 3 0 002.1-2.1c.5-2.1.5-4.9.5-4.9s0-2.8-.5-4.9zM9.7 15.5v-7L15.8 12l-6.1 3.5z"/></svg>
+        </a>
+      </nav>
+      <!-- Bridge arrow -->
+      <button class="success__go" aria-label="Next story">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <article class="success__content">
+      <h2 class="success__title">
+        <span class="txt-primary">Success</span><br/>
+        <span class="txt-accent">Story</span>
+      </h2>
+
+      <h3 class="success__name">Dr. Daniel</h3>
+      <div class="success__text">
+        <p>Dr. Daniel, a young orthopedic surgeon from Canada, needed to complete a specific number of clinical cases to finalize his training requirements.</p>
+        <p>Through our program, we secured his placement at a top international hospital, arranged his visa and accommodation, and made sure everything was ready before he arrived.</p>
+        <p>In just 3 months, Dr. Daniel completed all the required cases, gained valuable hands-on experience abroad, and returned to Canada fully qualified to move forward in his career.</p>
+        <p class="quote">“The process was so smooth — everything from travel to hospital placement was taken care of. I saved a lot of time and focused only on my training. I highly recommend this program.”<br/>— Dr. Daniel, Orthopedic Surgeon (Canada)</p>
+      </div>
+
+      <div class="success__badge">
+        <div class="badge__big">30+</div>
+        <div class="badge__text">
+          <div class="years">Years</div>
+          <small>Professional experience</small>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+<!-- ===== /Success Story Section ===== -->
+
+<!-- ===== /Services Section ===== -->
+
+  
+<!-- ===== Stories & Reasons Section ===== -->
+<section class="stories" id="stories">
+  <div class="wrap">
+    <h2 class="stories__title">Real Stories. <span class="txt-accent">Real Results.</span></h2>
+    <div class="stories__row">
+      <article class="story-card">
+        <div class="story-card__img"><img src="Image-1.png" alt="Dr. Jenny Doe portrait"></div>
+        <div class="story-card__meta">
+          <h4 class="story-card__name">Dr. Jenny Doe</h4>
+          <p class="story-card__role">MBBS / Dip in psychology</p>
+        </div>
+        <button class="story-card__go" aria-label="Open story">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </article>
+
+      <article class="story-card">
+        <div class="story-card__img"><img src="Image-2.png" alt="Dr. Jenny Doe portrait"></div>
+        <div class="story-card__meta">
+          <h4 class="story-card__name">Dr. Jenny Doe</h4>
+          <p class="story-card__role">MBBS / Dip in psychology</p>
+        </div>
+        <button class="story-card__go" aria-label="Open story">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </article>
+
+      <article class="story-card">
+        <div class="story-card__img"><img src="Image-3.png" alt="Dr. Jenny Doe portrait"></div>
+        <div class="story-card__meta">
+          <h4 class="story-card__name">Dr. Jenny Doe</h4>
+          <p class="story-card__role">MBBS / Dip in psychology</p>
+        </div>
+        <button class="story-card__go" aria-label="Open story">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </article>
+
+      <article class="story-card">
+        <div class="story-card__img"><img src="Image-4.png" alt="Dr. Jenny Doe portrait"></div>
+        <div class="story-card__meta">
+          <h4 class="story-card__name">Dr. Jenny Doe</h4>
+          <p class="story-card__role">MBBS / Dip in psychology</p>
+        </div>
+        <button class="story-card__go" aria-label="Open story">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="reasons" id="reasons">
+  <div class="wrap reasons__grid">
+    <div class="reasons__left">
+      <h2 class="reasons__title">Reasons<br/>to choose our <span class="txt-accent">Services.</span></h2>
+
+      <div class="reason">
+        <div class="reason__ico">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="reason__meta">
+          <h4>Fast &amp; easy process</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor</p>
+        </div>
+      </div>
+
+      <div class="reason">
+        <div class="reason__ico">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.6 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+        </div>
+        <div class="reason__meta">
+          <h4>Trusted partners</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor</p>
+        </div>
+      </div>
+
+      <div class="reason">
+        <div class="reason__ico">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" stroke="currentColor" stroke-width="2"/><path d="M7 7V5a5 5 0 0 1 10 0v2" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div class="reason__meta">
+          <h4>Full support</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reasons__media">
+      <div class="shape shape--top"></div>
+      <img src="Image.png" alt="Training discussion table">
+      <div class="shape shape--bottom"></div>
+    </div>
+  </div>
+</section>
+<!-- ===== /Stories & Reasons Section ===== -->
+
+<!-- ===== Appointment CTA ===== -->
+<section class="appointment" id="appointment">
+  <div class="wrap appointment__box">
+    <div class="appointment__left">
+      <h2 class="appointment__title">Fill the details and<br/>book appointment.</h2>
+      <form class="appointment__form" action="#" method="post" onsubmit="return false;">
+        <input type="text" name="name" placeholder="First and last name" aria-label="Name">
+        <input type="email" name="email" placeholder="Email address" aria-label="Email">
+        <input type="tel" name="phone" placeholder="Contact number" aria-label="Phone">
+      </form>
+    </div>
+
+    <div class="appointment__right">
+      <div class="calendar">
+        <div class="calendar__head">
+          <button aria-label="Previous month" class="cal-btn">&larr;</button>
+          <div class="calendar__label">Month year</div>
+          <button aria-label="Next month" class="cal-btn">&rarr;</button>
+        </div>
+        <div class="calendar__grid">
+          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+          <span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+          <span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span class="is-today">14</span><span>15</span>
+          <span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span>
+          <span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span>
+          <span>30</span>
+        </div>
+      </div>
+
+      <div class="appointment__cta">
+        <button class="btn-ghost" aria-label="Make appointment">
+          <span>Make appointment</span>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="appointment__socials" aria-hidden="true">
+        <a href="#" class="ico">f</a>
+        <a href="#" class="ico">t</a>
+        <a href="#" class="ico">▶</a>
+        <span class="divider"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== How It Works ===== -->
+<section class="how" id="how">
+  <div class="wrap">
+    <h2 class="how__title">How <span class="txt-accent">It Works</span></h2>
+    <div class="how__grid">
+      <article class="how-card">
+        <div class="how-card__ico">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 20h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="how-card__meta">
+          <h4>Apply Online</h4>
+          <p>Fill out a short form with your basic information and medical specialty.</p>
+        </div>
+        <span class="red-dot"></span>
+      </article>
+
+      <article class="how-card">
+        <div class="how-card__ico">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="7" r="3" stroke="currentColor" stroke-width="2"/><path d="M5 20a7 7 0 0114 0" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div class="how-card__meta">
+          <h4>Get Matched</h4>
+          <p>We connect you with the best international program that fits your training needs.</p>
+        </div>
+        <span class="red-dot"></span>
+      </article>
+
+      <article class="how-card">
+        <div class="how-card__ico">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" stroke="currentColor" stroke-width="2"/><path d="M7 7V5a5 5 0 0 1 10 0v2" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div class="how-card__meta">
+          <h4>Travel &amp; Train</h4>
+          <p>We arrange your visa, accommodation, and hospital placement so you can focus on your training.</p>
+        </div>
+        <span class="red-dot"></span>
+      </article>
+
+      <article class="how-card">
+        <div class="how-card__ico">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h14M11 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="how-card__meta">
+          <h4>Finish Faster</h4>
+          <p>Gain hands-on experience and finish your required cases in less time.</p>
+        </div>
+        <span class="red-dot"></span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Big Heading CTA ===== -->
+<section class="headline-cta">
+  <div class="wrap">
+    <h2 class="headline-cta__title">Ready To Accelerate<br/>Your <span class="txt-accent">Medical Journey</span></h2>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="wrap footer__box">
+    <div class="footer__left">
+      <div class="footer__logo">LOGO</div>
+      <p class="footer__tagline">Your Health Is Our <strong>Priority</strong></p>
+      <p class="footer__about">Lorem ipsum Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut.</p>
+      <div class="footer__socials">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">ig</a>
+        <a href="#" aria-label="YouTube">▶</a>
+      </div>
+    </div>
+    <div class="footer__right">
+      <h4>Contact Us</h4>
+      <ul class="footer__list">
+        <li><span class="ico">✆</span> 123 456 7890</li>
+        <li><span class="ico">✆</span> 123 456 7890</li>
+        <li><span class="ico">✉</span> info@Yourcompany.com</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">Copyright Your Company Name Goes Here</div>
+</footer>
+
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

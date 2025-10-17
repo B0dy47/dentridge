@@ -1,0 +1,431 @@
+/* ---------------- Base & Theme ---------------- */
+:root{
+  --bg:#ffffff;
+  --text:#0c0c0c;
+  --brand:#ED1C24;     /* الأحمر الأساسي للنص داخل الزر */
+  --radius-xl:32px;    /* درجة التقويس للصورة */
+  --shadow:0 24px 48px -20px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* ---------------- Header (Logo) ---------------- */
+.site-header{
+  display:flex; align-items:center; justify-content:center;
+  padding:14px 0 6px;
+}
+.brand{ height:150px; width:auto; display:block }
+
+/* ---------------- Layout ---------------- */
+.wrapper{
+  max-width:1200px;
+  margin-inline:auto;
+  padding:24px 20px 64px;
+}
+
+/* ---------------- Image Card ---------------- */
+.image-card{
+  position:relative;
+  margin:0;
+  border-radius:var(--radius-xl);
+  overflow:hidden;
+  background:#ffffff00;                 /* الخلفية بيضاء "زي كده" */
+  /* box-shadow:var(--shadow); */
+}
+
+/* نعرض الصورة كاملة بدون قص */
+.hero-img{
+  display:block;
+  width:100%;
+  height:auto;                      /* يحافظ على الأبعاد الأصلية */
+}
+
+/* ---------------- White CTA Button ---------------- */
+.cta{
+  position:absolute;                /* فوق الصورة */
+  left:85px; bottom:90px;           /* مكان الزر */
+  display:inline-flex; align-items:center; gap:12px;
+  padding:16px 22px;
+  border:0; border-radius:16px;
+  background:#fff; color:var(--brand);
+  font-weight:700; font-size:15px; line-height:1.1;
+  cursor:pointer;
+  box-shadow:0 12px 24px -12px rgba(0,0,0,.35);
+  transition:transform .2s ease, box-shadow .2s ease;
+  overflow:hidden;                  /* للرِبِّل */
+}
+.cta:hover{ transform:translateY(-2px); box-shadow:0 18px 32px -14px rgba(0,0,0,.38) }
+.cta:active{ transform:translateY(0) scale(.98) }
+.cta .arrow{ width:20px; height:20px; transition:transform .25s ease }
+.cta:hover .arrow{ transform:translateX(4px) }
+
+/* ---------------- Responsive ---------------- */
+@media (max-width:820px){
+  .brand{ height:64px }
+  .cta{ left:22px; bottom:22px }
+}
+@media (max-width:560px){
+  /* على الموبايل نخلي الزر تحت الصورة عشان ما يغطيش تفاصيل مهمة */
+  .cta{
+    position:static;
+    margin:14px 16px 18px;
+    display:flex; justify-content:center; width:auto;
+  }
+  .image-card{ overflow:visible; border-radius:var(--radius-xl) }
+}
+/* ========== Services Section ========== */
+:root{
+  --brand: var(--brand, #ED1C24);      /* لو عندك متغيّر قبل كده هيستخدمه */
+  --card-brown: #4C2B28;
+  --card-light: #EEEAE7;
+  --text-dark: #3E2F2E;
+  --text-muted: #7A6967;
+}
+
+.services{
+  padding: 36px 20px 90px;
+  background:#fff;
+}
+.services__container{
+  max-width: 1200px;
+  margin-inline: auto;
+}
+.services__title{
+  margin: 8px 0 22px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+.services__title .highlight{ color: var(--brand); }
+
+.services__grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+/* -------- Card base -------- */
+.service-card{
+  position: relative;
+  border-radius: 28px;
+  padding: 20px 20px 86px; /* مساحة للفقاعة والزر */
+  overflow: visible;
+  /* box-shadow: 0 18px 36px -18px rgba(0,0,0,.25); */
+}
+.service-card--dark{
+  background: var(--card-brown);
+  color:#fff;
+}
+.service-card--light{
+  background: var(--card-light);
+  color: var(--text-dark);
+}
+
+.service-card__media{
+  border-radius: 22px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.service-card__media img{
+  width:100%; height:auto; display:block;
+  border-radius: 22px;
+  object-fit: cover;
+}
+
+.service-card__heading{
+  margin: 6px 0 10px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: inherit;
+}
+.service-card__text{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: currentColor;
+  opacity: .85;
+}
+
+/* -------- Bubble + CTA circle -------- */
+.service-card__bubble{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 120px;
+  height: 86px;
+  background: #fff;
+  border-top-left-radius: 44px;
+  border-bottom-right-radius: 22px;
+  border-bottom-left-radius: 22px;
+  /* box-shadow: 0 16px 28px -18px rgba(0,0,0,.28); */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 12px;
+}
+
+.service-card__cta{
+  width: 54px;
+  height: 54px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--card-brown);
+  color:#fff;
+  display: inline-flex; align-items:center; justify-content:center;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+  box-shadow: 0 10px 20px -12px rgba(0,0,0,.35);
+}
+.service-card__cta--brand{ background: var(--brand); }
+.service-card__cta:hover{ transform: translateX(2px); }
+.service-card__arrow{ width:20px; height:20px }
+
+/* -------- Responsive -------- */
+@media (max-width: 1024px){
+  .services__grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 640px){
+  .services__grid{ grid-template-columns: 1fr; }
+  .service-card{ padding-bottom: 94px; }
+}
+
+
+
+/* ======== Override: Services section to match provided design exactly ======== */
+:root{
+  --brand: #ED1C24;
+  --card-brown: #4B2A2A;
+  --card-light: #F1EEEC;
+  --text-dark: #3E2F2E;
+  --text-muted: #756665;
+  --radius-xl: 28px;
+  --radius-lg: 22px;
+}
+.services{
+  padding: 40px 20px 80px;
+}
+.services__container{
+  max-width: 1180px; margin: 0 auto;
+}
+.services__title{
+  font-family: 'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  font-weight: 700; font-size: 28px; color: var(--text-dark);
+  margin: 0 0 20px;
+}
+.services__title .highlight{ color: var(--brand); }
+.services__grid{
+  display: grid; gap: 28px;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+}
+.service-card{
+  position: relative; overflow: visible;
+  border-radius: var(--radius-xl);
+  padding: 20px 22px 70px;
+  /* box-shadow: 0 6px 22px rgba(0,0,0,.06); */
+}
+.service-card__media img{
+  width: 100%; height: 210px; object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+.service-card__heading{
+  font-weight: 700; font-size: 20px; margin: 16px 0 8px;
+  letter-spacing: .2px;
+}
+.service-card__text{
+  font-size: 15px; line-height: 1.6; margin: 0;
+}
+/* Dark first card */
+.service-card--dark{
+  background: var(--card-brown); color: #fff;
+}
+.service-card--dark .service-card__text{ color: #F6F2F1; opacity:.9 }
+.service-card--dark .service-card__heading{ color: #fff }
+/* .service-card--dark::before{
+  content:""; position:absolute; left: 16px; bottom:-28px;
+  width: 210px; height: 105px; background: var(--card-brown);
+  border-bottom-left-radius: 24px;
+  border-top-right-radius: 44px; border-bottom-right-radius: 44px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+  z-index: 0;
+} */
+/* Light cards */
+.service-card--light{
+  background: var(--card-light); color: var(--text-dark);
+}
+.service-card--light .service-card__text{ color: var(--text-muted) }
+.service-card--light .service-card__heading{ color: var(--text-dark) }
+
+/* Bubble / CTA at bottom-right */
+.service-card__bubble{
+    --bubble-w: 138px;
+    --bubble-h: 79px;
+    position: absolute;
+    right: -22px;
+    bottom: -10px;
+  width: var(--bubble-w); height: var(--bubble-h);
+  background: #fff; border-radius: 24px;
+  display: flex; align-items: center; justify-content: center;
+  /* box-shadow: 0 8px 22px rgba(0,0,0,.12); */
+  z-index: 2;
+}
+.service-card__cta{
+  width: 46px; height: 46px; border: none; cursor: pointer;
+  border-radius: 50%; display:flex; align-items:center; justify-content:center;
+  color:#fff; background: var(--brand);
+  box-shadow: 0 6px 14px rgba(237,28,36,.35);
+}
+.service-card--light .service-card__cta{
+  background: var(--text-dark);
+  box-shadow: 0 6px 14px rgba(62,47,46,.25);
+}
+.service-card__arrow{ width: 22px; height: 22px }
+
+/* Navigation row */
+.services__nav{
+  display:flex; align-items:center; gap: 18px;
+  margin: 28px 0 10px;
+}
+.nav-btn{
+  width:44px; height:44px; border-radius:50%; background:#fff; border:1px solid #e5e2df;
+  display:grid; place-items:center; cursor:pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,.05);
+}
+.nav-btn span{ font-size: 18px; color: var(--text-dark) }
+.nav-dots{ display:flex; align-items:center; gap:10px; }
+.dot{
+  width: 8px; height: 8px; background:#ddd; border-radius:50%; display:inline-block;
+}
+.dot.is-active{ width: 10px; height: 10px; background:#BAAFAF }
+.dot.is-faded{ opacity:.45 }
+
+.services__footnote{
+  color:#B8B0AE; font-size: 13px; line-height:1.8; margin-top: 6px;
+}
+
+/* Responsive */
+@media (max-width: 1024px){
+  .services__grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 640px){
+  .services__grid{ grid-template-columns: 1fr; }
+  .service-card{ padding-bottom: 84px; }
+  .service-card__bubble{ right: 18px; bottom:-27px; }
+  .services__nav{ justify-content: space-between; }
+}
+
+
+/* Dots visual tweaks */
+.nav-dots .dot{ background:#ddd; opacity:.8; transition:opacity .2s, transform .2s; }
+.nav-dots .dot.is-active{ background:#BAAFAF; opacity:1; transform:scale(1.1); }
+.nav-dots .dot.is-faded{ opacity:.45; }
+
+
+
+/* ========== Appointment CTA ========== */
+.appointment{ background:#fff; padding:24px 0 40px; }
+.appointment__box{
+  background: linear-gradient(135deg, #ED1C24 0%, #C8111C 100%);
+  color:#fff; border-radius:28px; padding:28px;
+  display:grid; grid-template-columns: 1.1fr 1fr; gap:26px;
+  position:relative;
+  box-shadow:0 24px 48px -20px rgba(237,28,36,.45);
+}
+.appointment__title{ font-size:28px; font-weight:800; line-height:1.2; margin:8px 0 18px }
+.appointment__form{ display:grid; gap:14px; max-width:460px }
+.appointment__form input{
+  height:52px; border-radius:16px; border:0; padding:0 16px; font-size:15px;
+  background:#c6101a; color:#fff; outline:none;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.08);
+}
+.appointment__form input::placeholder{ color:#ffd6d8; }
+.appointment__right{ position:relative; padding:8px 12px 8px 8px }
+.calendar{
+  background:#fff; color:#1f2937; border-radius:16px; padding:14px; width: 320px; max-width:100%;
+  box-shadow:0 10px 24px rgba(0,0,0,.15);
+}
+.calendar__head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:10px }
+.cal-btn{ border:0; background:transparent; color:#1f2937; font-size:20px; cursor:pointer }
+.calendar__label{ font-weight:600; }
+.calendar__grid{
+  display:grid; grid-template-columns: repeat(7, 1fr); gap:8px; text-align:center; font-size:12px;
+}
+.calendar__grid span{ padding:8px 0; border-radius:8px; background:#f7f7f7 }
+.calendar__grid span:nth-child(-n+7){ font-weight:700; background:#fff; color:#6b7280 }
+.calendar__grid .is-today{ background:#ED1C24; color:#fff; font-weight:700; }
+
+.appointment__cta{ margin-top:14px }
+.btn-ghost{
+  display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius:14px; border:0;
+  background:#fff; color:#0f172a; font-weight:600; cursor:pointer;
+  box-shadow:0 10px 24px rgba(0,0,0,.18);
+}
+.btn-ghost svg{ width:20px; height:20px }
+
+.appointment__socials{
+  position:absolute; right:18px; top:22px; display:flex; flex-direction:column; align-items:center; gap:10px;
+}
+.appointment__socials .ico{
+  width:28px; height:28px; border-radius:50%; background:#ffefef20; display:grid; place-items:center;
+  font-weight:700; color:#fff; text-decoration:none; border:1px solid #ffffff36;
+}
+.appointment__socials .divider{
+  width:1px; height:68px; background:#ffffff60; display:block; border-radius:1px; margin-top:8px;
+}
+
+@media (max-width: 992px){
+  .appointment__box{ grid-template-columns:1fr; }
+  .appointment__right{ padding-top:0 }
+  .appointment__socials{ right:12px; top:12px; flex-direction:row }
+}
+
+/* ========== How It Works ========== */
+.how{ background:#fff; padding:22px 0 10px; }
+.how__title{ text-align:center; font-size:28px; font-weight:800; color:#1f2937; margin:8px 0 20px }
+.how__grid{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:18px; max-width:980px; margin:0 auto }
+.how-card{
+  position:relative; display:flex; gap:12px; align-items:flex-start; background:#F1EEEC; padding:16px; border-radius:14px;
+}
+.how-card__ico{ flex:0 0 44px; width:44px; height:44px; display:grid; place-items:center; background:#fff; border-radius:50%; color:#0f172a }
+.how-card__ico svg{ width:22px; height:22px }
+.how-card__meta h4{ margin:2px 0 6px; font-weight:700; font-size:16px; color:#0f172a }
+.how-card__meta p{ margin:0; font-size:13px; color:#6b7280 }
+.how-card .red-dot{ position:absolute; right:12px; bottom:-6px; width:10px; height:10px; background:#ED1C24; border-radius:50% }
+
+@media (max-width: 720px){
+  .how__grid{ grid-template-columns:1fr; }
+}
+
+/* ========== Big headline ========== */
+.headline-cta{ background:#fff; padding:12px 0 20px }
+.headline-cta__title{ text-align:center; font-size:40px; line-height:1.15; font-weight:800; color:#1d2740; }
+.headline-cta__title .txt-accent{ color:#ED1C24 }
+
+/* ========== Footer ========== */
+.site-footer{ margin-top:10px; background:#fff; }
+.footer__box{
+  margin:0 auto; background:#3E2F2E; color:#fff; border-top-left-radius:28px; border-top-right-radius:28px;
+  padding:28px; display:grid; grid-template-columns:1.1fr 1fr; gap:20px;
+}
+.footer__logo{ font-size:48px; font-weight:800; letter-spacing:.5px }
+.footer__tagline{ margin:8px 0 6px; opacity:.9 }
+.footer__about{ margin:8px 0 14px; color:#eee; opacity:.9; max-width:560px; line-height:1.7 }
+.footer__socials a{ display:inline-block; margin-right:10px; width:34px; height:34px; border-radius:8px; background:#ffffff18; color:#fff; text-align:center; line-height:34px; font-weight:700; text-decoration:none; }
+.footer__right h4{ margin:2px 0 10px; font-size:18px }
+.footer__list{ list-style:none; padding:0; margin:0 }
+.footer__list li{ margin:8px 0; display:flex; align-items:center; gap:8px; }
+.footer__list .ico{ display:inline-block; width:22px; text-align:center }
+
+.footer__bottom{
+  text-align:center; color:#7d7a79; padding:14px 10px; background:#2b2120;
+}
+@media (max-width: 992px){
+  .footer__box{ grid-template-columns:1fr }
+}
